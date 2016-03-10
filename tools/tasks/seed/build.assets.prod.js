@@ -17,6 +17,7 @@ module.exports = function () {
         path_1.join(config_1.APP_SRC, '**'),
         '!' + path_1.join(config_1.APP_SRC, '**', '*.ts'),
         '!' + path_1.join(config_1.APP_SRC, '**', '*.css'),
+        '!' + path_1.join(config_1.APP_SRC, '**', '*.scss'),
         '!' + path_1.join(config_1.APP_SRC, '**', '*.html'),
         '!' + path_1.join(config_1.ASSETS_SRC, '**', '*.js')
     ])

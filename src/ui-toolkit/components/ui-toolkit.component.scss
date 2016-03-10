@@ -1,0 +1,15 @@
+.ui-toolkit {
+  height: 100% !important;
+  .sidebar {
+    width: 200px;
+    background: #AFAFAF;
+    height: 100%;
+    float: left;
+    border-right: solid 1px #9F9F9F;
+  }
+  .main-content {
+    position: relative;
+    top : 0px;
+    float: left;
+  }
+}

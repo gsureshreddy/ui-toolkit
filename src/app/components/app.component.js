@@ -13,6 +13,7 @@ var navbar_component_1 = require('./navbar.component');
 var toolbar_component_1 = require('./toolbar.component');
 var home_component_1 = require('../../home/components/home.component');
 var about_component_1 = require('../../about/components/about.component');
+var ui_toolkit_component_1 = require('../../ui-toolkit/components/ui-toolkit.component');
 var name_list_service_1 = require('../../shared/services/name-list.service');
 var AppComponent = (function () {
     function AppComponent() {
@@ -28,7 +29,8 @@ var AppComponent = (function () {
         }),
         router_1.RouteConfig([
             { path: '/', name: 'Home', component: home_component_1.HomeComponent },
-            { path: '/about', name: 'About', component: about_component_1.AboutComponent }
+            { path: '/about', name: 'About', component: about_component_1.AboutComponent },
+            { path: '/ui-toolkit', name: 'UIToolkit', component: ui_toolkit_component_1.UIToolkitComponent }
         ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

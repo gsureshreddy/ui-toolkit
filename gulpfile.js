@@ -5,7 +5,7 @@ var config_1 = require('./tools/config');
 utils_1.loadTasks(config_1.SEED_TASKS_DIR);
 utils_1.loadTasks(config_1.PROJECT_TASKS_DIR);
 gulp.task('build.dev', function (done) {
-    return runSequence('clean.dev', 'tslint', 'build.assets.dev', 'build.js.dev', 'build.index.dev', done);
+    return runSequence('clean.dev', 'tslint', 'build.sass', 'build.assets.dev', 'build.js.dev', 'build.index.dev', done);
 });
 gulp.task('build.dev.watch', function (done) {
     return runSequence('build.dev', 'watch.dev', done);
@@ -14,7 +14,7 @@ gulp.task('build.e2e', function (done) {
     return runSequence('clean.dev', 'tslint', 'build.assets.dev', 'build.js.e2e', 'build.index.dev', done);
 });
 gulp.task('build.prod', function (done) {
-    return runSequence('clean.prod', 'tslint', 'build.assets.prod', 'build.html_css.prod', 'build.js.prod', 'build.bundles', 'build.bundles.app', 'build.index.prod', done);
+    return runSequence('clean.prod', 'tslint', 'build.sass', 'build.assets.prod', 'build.html_css.prod', 'build.js.prod', 'build.bundles', 'build.bundles.app', 'build.index.prod', done);
 });
 gulp.task('build.test', function (done) {
     return runSequence('clean.dev', 'tslint', 'build.assets.dev', 'build.js.test', 'build.index.dev', done);

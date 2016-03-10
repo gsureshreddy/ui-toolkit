@@ -15,13 +15,17 @@ var onlyDirs = function (es) {
 };
 
 export = () => {
-  return gulp.src([
-      join(APP_SRC, '**'),
-      '!' + join(APP_SRC, '**', '*.ts'),
-      '!' + join(APP_SRC, '**', '*.css'),
-      '!' + join(APP_SRC, '**', '*.html'),
-      '!' + join(ASSETS_SRC, '**', '*.js')
-    ])
-    .pipe(onlyDirs(es))
-    .pipe(gulp.dest(APP_DEST));
+    return gulp.src([
+            join(APP_SRC, '**'),
+            '!' + join(APP_SRC, '**', '*.ts'),
+            '!' + join(APP_SRC, '**', '*.css'),
+            // Exclude "scss" files
+            '!' + join(APP_SRC, '**', '*.scss'),
+            // ---
+            '!' + join(APP_SRC, '**', '*.html'),
+            '!' + join(ASSETS_SRC, '**', '*.js')
+        ])
+        .pipe(onlyDirs(es))
+        .pipe(gulp.dest(APP_DEST));
 }
+
